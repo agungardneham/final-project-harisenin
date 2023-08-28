@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Culinary Crossroads</title>
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,9 +18,394 @@
     <!--Hero-->
 
     <!--Strength-->
+    <section
+      class="max-w-screen-xs mx-auto px-5 my-5 md:max-w-screen-md lg:max-w-screen-lg 2xl:max-w-screen-2xl"
+    >
+      <div class="flex flex-col justify-center items-center md:flex-row">
+        <div class="flex justify-center items-end w-full h-[20rem] md:order-2">
+          <div class="absolute">
+            <img
+              src="Asset/delivery-man.png"
+              alt="delivery man"
+              class="z-0 w-52 h-52 absolute bottom-[7rem] right-[10rem]"
+            />
+            <img
+              src="Asset/payment.png"
+              alt="online payment"
+              class="z-1 w-32 h-32 absolute bottom-[10rem] left-[12rem]"
+            />
+            <img
+              src="Asset/food-img.png"
+              alt="food"
+              class="z-2 w-[22rem] relative"
+            />
+          </div>
+        </div>
+        <div class="flex flex-col gap-5 md:order-1">
+          <div class="flex flex-col shrink-0">
+            <h2
+              class="text-[#333] text-center font-montserrat text-[2.5rem] not-italic font-extrabold"
+            >
+              Why You Choose Us?
+            </h2>
+            <div class="w-full h-[0.25rem] bg-[#FF5733]"></div>
+          </div>
+          <div>
+            <div class="flex flex-col gap-5 list-none">
+              <div class="flex flex-row gap-5">
+                <div
+                  class="w-8 h-8 bg-[#1ABC9C] text-center items-center text-white rounded-full text-[1.25rem] font-lato not-italic font-semibold"
+                >
+                  1
+                </div>
+                <div
+                  class="text-[#333] font-lato text-[1.25rem] not-italic font-semibold"
+                >
+                  Healthy and Delicious Food
+                </div>
+              </div>
+              <div class="flex flex-row gap-5">
+                <div
+                  class="w-8 h-8 bg-[#1ABC9C] text-center items-center text-white rounded-full text-[1.25rem] font-lato not-italic font-semibold"
+                >
+                  2
+                </div>
+                <div
+                  class="text-[#333] font-lato text-[1.25rem] not-italic font-semibold"
+                >
+                  Fast and Free Delivery
+                </div>
+              </div>
+              <div class="flex flex-row gap-5">
+                <div
+                  class="w-8 h-8 bg-[#1ABC9C] text-center items-center text-white rounded-full text-[1.25rem] font-lato not-italic font-semibold"
+                >
+                  3
+                </div>
+                <div
+                  class="text-[#333] font-lato text-[1.25rem] not-italic font-semibold"
+                >
+                  Easy Payment and Reasonable Price
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!--Menu-->
+    <section
+      class="max-w-screen-xs mx-auto px-5 my-5 md:max-w-screen-md lg:max-w-screen-lg 2xl:max-w-screen-2xl"
+    >
+      <div class="flex flex-row items-center justify-center space-x-3">
+        <div
+          class="text-[1.25rem] font-lato bg-[#FF5733] px-7 py-2 rounded-full text-white font-semibold lg:text-[2.25rem]"
+        >
+          <a href="#"> Food </a>
+        </div>
+        <div
+          class="text-[1.25rem] font-lato bg-[#FFFFFF] px-7 py-2 rounded-full text-black font-semibold lg:text-[2.25rem]"
+        >
+          <a href="#" class=""> Beverage </a>
+        </div>
+      </div>
+
+      <div
+        class="grid grid-cols-1 mt-12 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:gap-[6.25rem]"
+      >
+        <div
+          class="bg-white h-auto flex flex-col justify-center items-center border border-gray-100 transition transform duration-700 hover:shadow-xl hover:scale-105 relative p-3 rounded-lg gap-4"
+        >
+          <div
+            class="w-full mx-auto transform transition duration-300 hover:scale-105"
+          >
+            <img
+              src="Asset/fried-rice.jpg"
+              alt="fried rice"
+              class="w-[18.75rem] h-[18.75rem] object-cover rounded-full mx-auto md:w-[15rem] md:h-[15rem] lg:w-[12.5rem] lg:h-[12.5rem] xl:w-[15rem] xl:h-[15rem] 2xl:w-[17.75rem] 2xl:h-[17.75rem]"
+            />
+          </div>
+          <div class="flex flex-col justify-center items-center gap-1">
+            <div
+              class="text-black text-center font-lato text-[1.25rem] not-italic font-normal md:text-[2rem]"
+            >
+              Fried Rice
+            </div>
+            <div
+              class="h-14 text-black text-center font-lato text-[1rem] not-italic font-light md:text-[1.5rem] md:h-[10rem] lg:h-[12rem] xl:h-[10rem]"
+            >
+              Exquisite fried rice with aromatic spices and sauces. A culinary
+              delight awaits.
+            </div>
+            <div
+              class="text-black text-center font-lato text-[2rem] font-bold md:text-[2rem]"
+            >
+              Rp25.000
+            </div>
+          </div>
+          <div class="bg-[#FF5733] text-white py-2 px-5 rounded-[3.125rem]">
+            <button>
+              <a
+                href="#"
+                class="text-white text-center text-[1rem] font-semibold md:text-[1.75rem] lg:text-[1.5rem]"
+              >
+                ORDER NOW
+              </a>
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="bg-white flex flex-col justify-center items-center border border-gray-100 transition transform duration-700 hover:shadow-xl hover:scale-105 p-3 rounded-lg relative gap-4"
+        >
+          <div
+            class="w-full mx-auto transform transition duration-300 hover:scale-105"
+          >
+            <img
+              src="Asset/pad-thai.jpg"
+              alt="phad thai"
+              class="w-[18.75rem] h-[18.75rem] object-cover rounded-full mx-auto md:w-[15rem] md:h-[15rem] lg:w-[12.5rem] lg:h-[12.5rem] xl:w-[15rem] xl:h-[15rem] 2xl:w-[17.75rem] 2xl:h-[17.75rem]"
+            />
+          </div>
+          <div class="flex flex-col justify-center items-center gap-1">
+            <div
+              class="text-black text-center font-lato text-[1.25rem] not-italic font-normal md:text-[2rem]"
+            >
+              Pad Thai
+            </div>
+            <div
+              class="h-16 text-black text-center font-lato text-[1rem] not-italic font-light md:text-[1.5rem] md:h-[10rem] lg:h-[12rem] xl:h-[10rem]"
+            >
+              Tantalizing Thai stir-fried noodles. A taste of Asia's finest
+              dish.
+            </div>
+            <div
+              class="text-black text-center font-lato text-[2rem] font-bold md:text-[2rem]"
+            >
+              Rp100.000
+            </div>
+          </div>
+          <div class="bg-[#FF5733] text-white py-2 px-5 rounded-[3.125rem]">
+            <button>
+              <a
+                href="#"
+                class="text-white text-center text-[1rem] font-semibold md:text-[1.75rem] lg:text-[1.5rem]"
+              >
+                ORDER NOW
+              </a>
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="bg-white flex flex-col justify-center items-center border border-gray-100 transition transform duration-700 hover:shadow-xl hover:scale-105 p-3 rounded-lg relative gap-4"
+        >
+          <div
+            class="w-full mx-auto transform transition duration-300 hover:scale-105"
+          >
+            <img
+              src="Asset/pho.jpg"
+              alt="pho"
+              class="w-[18.75rem] h-[18.75rem] object-cover rounded-full mx-auto md:w-[15rem] md:h-[15rem] lg:w-[12.5rem] lg:h-[12.5rem] xl:w-[15rem] xl:h-[15rem] 2xl:w-[17.75rem] 2xl:h-[17.75rem]"
+            />
+          </div>
+          <div class="flex flex-col justify-center items-center gap-1">
+            <div
+              class="text-black text-center font-lato text-[1.25rem] not-italic font-normal md:text-[2rem]"
+            >
+              Pho
+            </div>
+            <div
+              class="h-16 text-black text-center font-lato text-[1rem] not-italic font-light md:text-[1.5rem] md:h-[10rem] lg:h-[12rem] xl:h-[10rem]"
+            >
+              Savory Vietnamese pho brimming with noodles, herbs, and tender
+              meats.
+            </div>
+            <div
+              class="text-black text-center font-lato text-[2rem] font-bold md:text-[2rem]"
+            >
+              Rp50.000
+            </div>
+          </div>
+          <div class="bg-[#FF5733] text-white py-2 px-5 rounded-[3.125rem]">
+            <button>
+              <a
+                href="#"
+                class="text-white text-center text-[1rem] font-semibold md:text-[1.75rem] lg:text-[1.5rem]"
+              >
+                ORDER NOW
+              </a>
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="bg-white flex flex-col justify-center items-center border border-gray-100 transition transform duration-700 hover:shadow-xl hover:scale-105 p-3 rounded-lg relative gap-4"
+        >
+          <div
+            class="w-full mx-auto transform transition duration-300 hover:scale-105"
+          >
+            <img
+              src="Asset/ramen.jpg"
+              alt="ramen"
+              class="w-[18.75rem] h-[18.75rem] object-cover rounded-full mx-auto md:w-[15rem] md:h-[15rem] lg:w-[12.5rem] lg:h-[12.5rem] xl:w-[15rem] xl:h-[15rem] 2xl:w-[17.75rem] 2xl:h-[17.75rem]"
+            />
+          </div>
+          <div class="flex flex-col justify-center items-center gap-1">
+            <div
+              class="text-black text-center font-lato text-[1.25rem] not-italic font-normal md:text-[2rem]"
+            >
+              Ramen
+            </div>
+            <div
+              class="h-16 text-black text-center font-lato text-[1rem] not-italic font-light md:text-[1.5rem] md:h-[10rem] lg:h-[12rem] xl:h-[10rem]"
+            >
+              Rich broth, tender noodles, flavorful toppings, ultimate comfort.
+            </div>
+            <div
+              class="text-black text-center font-lato text-[2rem] font-bold md:text-[2rem]"
+            >
+              Rp40.000
+            </div>
+          </div>
+          <div class="bg-[#FF5733] text-white py-2 px-5 rounded-[3.125rem]">
+            <button>
+              <a
+                href="#"
+                class="text-white text-center text-[1rem] font-semibold md:text-[1.75rem] lg:text-[1.5rem]"
+              >
+                ORDER NOW
+              </a>
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="bg-white flex flex-col justify-center items-center border border-gray-100 transition transform duration-700 hover:shadow-xl hover:scale-105 p-3 rounded-lg relative gap-4"
+        >
+          <div
+            class="w-full mx-auto transform transition duration-300 hover:scale-105"
+          >
+            <img
+              src="Asset/rendang.webp"
+              alt="rendang"
+              class="w-[18.75rem] h-[18.75rem] object-cover rounded-full mx-auto md:w-[15rem] md:h-[15rem] lg:w-[12.5rem] lg:h-[12.5rem] xl:w-[15rem] xl:h-[15rem] 2xl:w-[17.75rem] 2xl:h-[17.75rem]"
+            />
+          </div>
+          <div class="flex flex-col justify-center items-center gap-1">
+            <div
+              class="text-black text-center font-lato text-[1.25rem] not-italic font-normal md:text-[2rem]"
+            >
+              Rendang
+            </div>
+            <div
+              class="h-16 text-black text-center font-lato text-[1rem] not-italic font-light md:text-[1.5rem] md:h-[10rem] lg:h-[12rem] xl:h-[10rem]"
+            >
+              Slow-cooked beef in coconut, spices; a sumptuous, bold indulgence.
+            </div>
+            <div
+              class="text-black text-center font-lato text-[2rem] font-bold md:text-[2rem]"
+            >
+              Rp40.000
+            </div>
+          </div>
+          <div class="bg-[#FF5733] text-white py-2 px-5 rounded-[3.125rem]">
+            <button>
+              <a
+                href="#"
+                class="text-white text-center text-[1rem] font-semibold md:text-[1.75rem] lg:text-[1.5rem]"
+              >
+                ORDER NOW
+              </a>
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="bg-white flex flex-col justify-center items-center border border-gray-100 transition transform duration-700 hover:shadow-xl hover:scale-105 p-3 rounded-lg relative gap-4"
+        >
+          <div
+            class="w-full mx-auto transform transition duration-300 hover:scale-105"
+          >
+            <img
+              src="Asset/lasagna_169.jpeg"
+              alt="rendang"
+              class="w-[18.75rem] h-[18.75rem] object-cover rounded-full mx-auto md:w-[15rem] md:h-[15rem] lg:w-[12.5rem] lg:h-[12.5rem] xl:w-[15rem] xl:h-[15rem] 2xl:w-[17.75rem] 2xl:h-[17.75rem]"
+            />
+          </div>
+          <div class="flex flex-col justify-center items-center gap-1">
+            <div
+              class="text-black text-center font-lato text-[1.25rem] not-italic font-normal md:text-[2rem]"
+            >
+              Lasagna
+            </div>
+            <div
+              class="h-16 text-black text-center font-lato text-[1rem] not-italic font-light md:text-[1.5rem] md:h-[10rem] lg:h-[12rem] xl:h-[10rem]"
+            >
+              Layers of pasta, rich meat sauce, creamy cheese; classic Italian
+              comfort.
+            </div>
+            <div
+              class="text-black text-center font-lato text-[2rem] font-bold md:text-[2rem]"
+            >
+              Rp100.000
+            </div>
+          </div>
+          <div class="bg-[#FF5733] text-white py-2 px-5 rounded-[3.125rem]">
+            <button>
+              <a
+                href="#"
+                class="text-white text-center text-[1rem] font-semibold md:text-[1.75rem] lg:text-[1.5rem]"
+              >
+                ORDER NOW
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!--Footer-->
+    <footer
+      class="flex items-center w-full h-auto my-10 bg-[#FF573380] md:px-[5rem] lg:px-[7.5rem] lg:h-[30rem] 2xl:px-[20rem] px-8"
+    >
+      <div
+        class="grid grid-cols-1 items-center justify-center md:grid-cols-2 lg:grid-cols-3 md:gap-28"
+      >
+        <div
+          class="w-2/3 text-[#333] font-lato text-[1rem] font-normal mt-14 md:w-full md:text-[1.25rem] lg:text-[1.5rem]"
+        >
+          1234 Example Street, Anycity City, Anytown State, Postal code: 12345,
+          Undefined Country
+        </div>
+        <div
+          class="w-2/3 text-[#333] font-lato text-[1rem] font-normal mt-14 md:w-full md:text-[1.25rem] lg:text-[1.5rem]"
+        >
+          Tel: +123-456-7890
+          <span class="block">Email: culinary@crossroads.com</span> Website:
+          www.culinarycrossroads.com
+        </div>
+        <div
+          class="w-2/3 text-[#333] font-lato text-[1rem] font-normal my-14 md:w-full md:text-[1.25rem] lg:text-[1.5rem]"
+        >
+          Keep in touch with us!
+          <div class="flex flex-row gap-2">
+            <a href="#" class="h-9 w-9 md:h-12 md:w-12">
+              <img src="Asset/instagram-logo.svg" alt="instagram logo" />
+            </a>
+            <a href="#" class="h-8 w-8 md:h-11 md:w-11">
+              <img src="Asset/facebook-logo.svg" alt="facebook logo" />
+            </a>
+            <a href="#" class="h-8 w-8 md:h-11 md:w-11">
+              <img src="Asset/twitter-logo.svg" alt="twitter logo" />
+            </a>
+            <a href="#" class="h-9 w-9 md:h-12 md:w-12">
+              <img src="Asset/youtube-logo.svg" alt="youtube logo" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
