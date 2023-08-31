@@ -15,10 +15,37 @@
 
   <body class="p-0 m-0 bg-[#ff5733cc]">
     <!--Navbar-->
+    <header
+      class="bg-white shadow-md fixed z-50 top-0 left-0 w-full transition duration-500"
+      id="header"
+    >
+      <nav class="flex items-center max-w-screen-2xl mx-auto px-6 py-3">
+        <div
+          class="flex flex-grow text-[#333] font-pacifico text-[1rem] not-italic font-normal cursor-pointer md:text-[1.5rem] xl:text-[2rem]"
+        >
+          <a href="index.html#home">Culinary Crossroads</a>
+        </div>
+        <div class="flex items-center justify-end space-x-3">
+          <div class="w-10 md:w-20">
+            <a href="signin.html"> <img src="Asset/cart.svg" alt="cart" /></a>
+          </div>
+          <div
+            class="text-[#333] font-lato text-[1rem] font-medium md:text-[1.5rem] xl:text-[2rem]"
+          >
+            <a href="signin.html">Sign In</a>
+          </div>
+          <div
+            class="flex justify-center items-center px-3 py-1 bg-[#FF5733] rounded-[3.125rem] text-white text-center font-lato text-[1rem] font-medium md:text-[1.5rem] md:px-5 md:py-2 xl:text-[2rem] xl:px-7 xl:py-3 hover:bg-[#D4492A]"
+          >
+            <a href="signup.html">Sign Up</a>
+          </div>
+        </div>
+      </nav>
+    </header>
 
     <!--Sign Up-->
-    <div
-      class="flex flex-col max-w-xs justify-start items-center gap-[1.5rem] mx-auto xl:max-w-xl"
+    <section
+      class="flex flex-col max-w-xs justify-start items-center gap-[1.5rem] mx-auto my-24 md:mt-32 xl:max-w-xl"
     >
       <h1
         class="text-white text-center font-pacifico text-[3rem] not-italic font-normal xl:text-[5rem]"
@@ -134,7 +161,9 @@
             >
               <p>
                 Already have an account? Login
-                <a href="" class="no-underline text-[#ff5733]">here</a>
+                <a href="signin.html" class="no-underline text-[#ff5733]"
+                  >here</a
+                >
               </p>
             </div>
           </form>
