@@ -8,9 +8,6 @@ module.exports = {
         montserrat: ["Montserrat", "sans-serif"],
         pacifico: ["Pacifico", "cursive"],
       },
-      screens: {
-        xxxl: "1920px",
-      },
     },
   },
   plugins: [
