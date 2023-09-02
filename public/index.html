@@ -14,7 +14,7 @@
   </head>
   <body id="home">
     <!--Navbar-->
-    <header class="navbar" id="header">
+    <header class="navbar bg-transparent" id="header">
       <nav class="navbar__container">
         <div class="navbar-logo">
           <a href="#home">Culinary Crossroads</a>
@@ -23,14 +23,10 @@
           <div class="cart-icon">
             <a href="signin.html"> <img src="Asset/cart.svg" alt="cart" /></a>
           </div>
-          <div
-            class="text-[#333] font-lato text-[1rem] font-medium md:text-[1.25rem]"
-          >
+          <button class="sign-in__button">
             <a href="signin.html">Sign In</a>
-          </div>
-          <div
-            class="flex justify-center items-center px-3 py-1 bg-[#FF5733] rounded-[3.125rem] text-white text-center font-lato text-[1rem] font-medium md:text-[1.25rem] md:px-5 md:py-2 hover:bg-[#D4492A]"
-          >
+          </button>
+          <button class="sign-up__button">
             <a href="signup.html">Sign Up</a>
           </button>
         </div>
@@ -38,137 +34,73 @@
     </header>
 
     <!--Hero-->
-    <main class="max-w-screen h-[50rem] overflow-hidden">
-      <div
-        class="flex flex-col justify-center items-center shrink-0 w-full h-[50rem] hero-container 2xl:items-end"
-      >
-        <div class="flex flex-col gap-[0.5rem] 2xl:mr-24 xxxl:mr-64 z-50">
-          <h1
-            class="text-[#1ABC9C] text-center font-lato text-[1.5rem] not-italic font-semibold md:text-[2.5rem]"
-          >
+    <main class="max-w-screen hero">
+      <div class="hero__container">
+        <div class="hero-text__container">
+          <h1 class="hero-text1">
             Welcome to
             <span class="font-pacifico font-normal">Culinary Crossroads!</span>
           </h1>
-          <h1
-            class="text-[#333] text-center font-montserrat text-[2rem] not-italic font-extrabold md:text-[2.5rem]"
-          >
-            Explore Our Flavorful Creations
-          </h1>
-          <h1
-            class="text-[#333] text-center font-lato text-[1.5rem] not-italic font-semibold md:text-[2rem]"
-          >
-            Fast and Free Delivery
-          </h1>
-          <div class="flex justify-center items-center shrink-0">
-            <button
-              class="bg-[#FF5733] px-5 py-2 rounded-[3.125rem] text-white font-lato text-[1.25rem] not-italic font-semibold md:text-[1.5rem] hover:bg-[#D4492A] cursor-pointer"
-            >
+          <h1 class="hero-text2">Explore Our Flavorful Creations</h1>
+          <h1 class="hero-text3">Fast and Free Delivery</h1>
+          <div class="hero-button__container">
+            <button class="hero-button">
               <a href="#menu"> Order Now </a>
             </button>
           </div>
         </div>
-        <div class="absolute overflow-hidden w-full h-[50rem] 2xl:h-[65rem]">
-          <img
-            src="Asset/hero-1.png"
-            alt="curry"
-            class="relative top-[35rem] right-[10rem] w-80 h-80 bg-cover md:w-[40rem] md:h-[40rem] md:top-[30rem] md:right-[20rem] 2xl:w-[35rem] 2xl:h-[35rem] 2xl:right-[-10rem] 2xl:top-[22rem]"
-          />
-          <img
-            src="Asset/hero-2.png"
-            alt="sambal"
-            class="relative bottom-[13rem] right-[1rem] w-32 h-32 md:w-52 md:h-52 md:bottom-[35rem] lg:right-[-3rem] 2xl:bottom-[20rem] 2xl:right-[-7rem]"
-          />
-          <img
-            src="Asset/hero-acc-1.png"
-            alt="leaf"
-            class="relative top-[5rem] left-[3rem] w-24 h-24 md:w-40 md:h-40 md:top-[-28rem] 2xl:w-64 2xl:h-64 2xl:top-[-35rem] 2xl:left-[30rem]"
-          />
-          <img
-            src="Asset/hero-acc-2.png"
-            alt="chili"
-            class="relative left-[16rem] top-[5rem] w-32 h-32 sm:left-[30rem] md:w-44 md:h-44 md:top-[-30rem] md:left-[38rem] lg:left-[50rem] xl:left-[70rem] 2xl:left-[80rem] 2xl:top-[-20rem]"
-          />
+        <div class="hero-img__container">
+          <img src="Asset/hero-1.png" alt="curry" class="hero-img1" />
+          <img src="Asset/hero-2.png" alt="sambal" class="hero-img2" />
+          <img src="Asset/hero-acc-1.png" alt="leaf" class="hero-img__acc1" />
+          <img src="Asset/hero-acc-2.png" alt="chili" class="hero-img__acc2" />
         </div>
       </div>
     </main>
 
     <!--Strength-->
     <section
-      class="max-w-screen-xs mx-auto px-5 my-12 md:max-w-screen-md lg:max-w-screen-lg md:my-32"
+      class="strength max-w-screen-xs md:max-w-screen-md lg:max-w-screen-lg"
     >
-      <div class="flex flex-col justify-center items-center md:flex-row">
-        <div class="flex justify-center items-end w-full h-[20rem] md:order-2">
+      <div class="strength__container">
+        <div class="strength-img__container">
           <div class="absolute">
             <img
               src="Asset/delivery-man.png"
               alt="delivery man"
-              class="z-0 w-52 h-52 absolute bottom-[7rem] right-[10rem]"
+              class="strength-img1 z-0"
             />
             <img
               src="Asset/payment.png"
               alt="online payment"
-              class="z-1 w-32 h-32 absolute bottom-[10rem] left-[12rem]"
+              class="strength-img2 z-1"
             />
             <img
               src="Asset/food-img.png"
               alt="food"
-              class="z-2 w-[22rem] relative"
+              class="strength-img3 z-2"
             />
           </div>
         </div>
-        <div class="flex flex-col gap-5 md:order-1 md:w-full">
-          <div class="flex flex-col shrink-0">
-            <h2
-              class="text-[#333] text-center font-montserrat text-[2.5rem] not-italic font-extrabold"
-            >
-              Why You Choose Us?
-            </h2>
-            <div class="w-full h-[0.25rem] bg-[#FF5733]"></div>
+        <div class="strength-text__container">
+          <div class="strength-title__container">
+            <h2 class="strength-title">Why You Choose Us?</h2>
+            <div class="strength-title__line"></div>
           </div>
-          <div>
-            <div class="flex flex-col gap-5 list-none">
-              <div
-                class="flex flex-row gap-5 transition transform duration-700 hover:shadow-xl hover:scale-105"
-              >
-                <div
-                  class="w-8 h-8 bg-[#1ABC9C] text-center items-center text-white rounded-full text-[1.25rem] font-lato not-italic font-semibold"
-                >
-                  1
-                </div>
-                <div
-                  class="text-[#333] font-lato text-[1.25rem] not-italic font-semibold"
-                >
-                  Healthy and Delicious Food
-                </div>
-              </div>
-              <div
-                class="flex flex-row gap-5 transition transform duration-700 hover:shadow-xl hover:scale-105"
-              >
-                <div
-                  class="w-8 h-8 bg-[#1ABC9C] text-center items-center text-white rounded-full text-[1.25rem] font-lato not-italic font-semibold"
-                >
-                  2
-                </div>
-                <div
-                  class="text-[#333] font-lato text-[1.25rem] not-italic font-semibold"
-                >
-                  Fast and Free Delivery
-                </div>
-              </div>
-              <div
-                class="flex flex-row gap-5 transition transform duration-700 hover:shadow-xl hover:scale-105"
-              >
-                <div
-                  class="w-8 h-8 bg-[#1ABC9C] text-center items-center text-white rounded-full text-[1.25rem] font-lato not-italic font-semibold"
-                >
-                  3
-                </div>
-                <div
-                  class="text-[#333] font-lato text-[1.25rem] not-italic font-semibold"
-                  id="menu"
-                >
-                  Easy Payment and Reasonable Price
-                </div>
+
+          <div class="strength-list">
+            <div class="strength-list__container">
+              <div class="strength-list__number">1</div>
+              <div class="strength-list__text">Healthy and Delicious Food</div>
+            </div>
+            <div class="strength-list__container">
+              <div class="strength-list__number">2</div>
+              <div class="strength-list__text">Fast and Free Delivery</div>
+            </div>
+            <div class="strength-list__container">
+              <div class="strength-list__number">3</div>
+              <div class="strength-list__text" id="menu">
+                Easy Payment and Reasonable Price
               </div>
             </div>
           </div>
@@ -177,330 +109,150 @@
     </section>
 
     <!--Menu-->
-    <section
-      class="max-w-screen-xs mx-auto px-5 my-5 md:max-w-screen-md lg:max-w-screen-lg"
-    >
-      <div class="flex flex-row items-center justify-center space-x-3">
-        <div
-          class="text-[1.25rem] font-lato bg-[#FF5733] px-7 py-2 rounded-full text-white font-semibold lg:text-[2.25rem] hover:bg-[#D4492A]"
-        >
+    <section class="menu max-w-screen-xs md:max-w-screen-md lg:max-w-screen-lg">
+      <div class="menu-type__container">
+        <div class="menu-type__food">
           <a href="#"> Food </a>
         </div>
-        <div
-          class="text-[1.25rem] font-lato bg-[#FFFFFF] px-7 py-2 rounded-full text-black font-semibold lg:text-[2.25rem] hover:bg-[#E0E0E0]"
-        >
+        <div class="menu-type__beverage">
           <a href="#" class=""> Beverage </a>
         </div>
       </div>
 
-      <div
-        class="grid grid-cols-1 mt-12 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:gap-[6.25rem]"
-      >
-        <div
-          class="bg-white h-auto flex flex-col justify-center items-center border border-gray-100 transition transform duration-700 hover:shadow-xl hover:scale-105 relative p-3 rounded-lg gap-4"
-        >
-          <div
-            class="w-full mx-auto transform transition duration-300 hover:scale-105"
-          >
-            <img
-              src="Asset/fried-rice.jpg"
-              alt="fried rice"
-              class="w-[18.75rem] h-[18.75rem] object-cover rounded-full mx-auto md:w-[15rem] md:h-[15rem] lg:w-[12.5rem] lg:h-[12.5rem] xl:w-[15rem] xl:h-[15rem]"
-            />
+      <div class="menu__container">
+        <div class="menu__card">
+          <div class="menu-img__container">
+            <img src="Asset/fried-rice.jpg" alt="fried rice" class="menu-img" />
           </div>
-          <div class="flex flex-col justify-center items-center gap-1">
-            <div
-              class="text-black text-center font-lato text-[1.25rem] not-italic font-normal md:text-[2rem]"
-            >
-              Fried Rice
-            </div>
-            <div
-              class="h-14 text-black text-center font-lato text-[1rem] not-italic font-light md:text-[1.5rem] md:h-[10rem] lg:h-[12rem] xl:h-[10rem]"
-            >
+          <div class="menu-text__container">
+            <div class="menu-text__title">Fried Rice</div>
+            <div class="menu-text__desc">
               Exquisite fried rice with aromatic spices and sauces. A culinary
               delight awaits.
             </div>
-            <div
-              class="text-black text-center font-lato text-[2rem] font-bold md:text-[2rem]"
-            >
-              Rp25.000
-            </div>
+            <div class="menu-text__price">Rp25.000</div>
           </div>
-          <div
-            class="bg-[#FF5733] text-white py-2 px-5 rounded-[3.125rem] hover:bg-[#D4492A]"
-          >
-            <button>
-              <a
-                href="#"
-                class="text-white text-center text-[1rem] font-semibold md:text-[1.75rem] lg:text-[1.5rem]"
-              >
-                ORDER NOW
-              </a>
-            </button>
-          </div>
+          <button class="menu-button">
+            <a href="#" class="menu-button__text"> ORDER NOW </a>
+          </button>
         </div>
 
-        <div
-          class="bg-white flex flex-col justify-center items-center border border-gray-100 transition transform duration-700 hover:shadow-xl hover:scale-105 p-3 rounded-lg relative gap-4"
-        >
-          <div
-            class="w-full mx-auto transform transition duration-300 hover:scale-105"
-          >
-            <img
-              src="Asset/pad-thai.jpg"
-              alt="phad thai"
-              class="w-[18.75rem] h-[18.75rem] object-cover rounded-full mx-auto md:w-[15rem] md:h-[15rem] lg:w-[12.5rem] lg:h-[12.5rem] xl:w-[15rem] xl:h-[15rem]"
-            />
+        <div class="menu__card">
+          <div class="menu-img__container">
+            <img src="Asset/pad-thai.jpg" alt="phad thai" class="menu-img" />
           </div>
-          <div class="flex flex-col justify-center items-center gap-1">
-            <div
-              class="text-black text-center font-lato text-[1.25rem] not-italic font-normal md:text-[2rem]"
-            >
-              Pad Thai
-            </div>
-            <div
-              class="h-16 text-black text-center font-lato text-[1rem] not-italic font-light md:text-[1.5rem] md:h-[10rem] lg:h-[12rem] xl:h-[10rem]"
-            >
+          <div class="menu-text__container">
+            <div class="menu-text__title">Pad Thai</div>
+            <div class="menu-text__desc">
               Tantalizing Thai stir-fried noodles. A taste of Asia's finest
               dish.
             </div>
-            <div
-              class="text-black text-center font-lato text-[2rem] font-bold md:text-[2rem]"
-            >
-              Rp100.000
-            </div>
+            <div class="menu-text__price">Rp100.000</div>
           </div>
-          <div
-            class="bg-[#FF5733] text-white py-2 px-5 rounded-[3.125rem] hover:bg-[#D4492A]"
-          >
-            <button>
-              <a
-                href="#"
-                class="text-white text-center text-[1rem] font-semibold md:text-[1.75rem] lg:text-[1.5rem]"
-              >
-                ORDER NOW
-              </a>
-            </button>
-          </div>
+          <button class="menu-button">
+            <a href="#" class="menu-button__text"> ORDER NOW </a>
+          </button>
         </div>
 
-        <div
-          class="bg-white flex flex-col justify-center items-center border border-gray-100 transition transform duration-700 hover:shadow-xl hover:scale-105 p-3 rounded-lg relative gap-4"
-        >
-          <div
-            class="w-full mx-auto transform transition duration-300 hover:scale-105"
-          >
-            <img
-              src="Asset/pho.jpg"
-              alt="pho"
-              class="w-[18.75rem] h-[18.75rem] object-cover rounded-full mx-auto md:w-[15rem] md:h-[15rem] lg:w-[12.5rem] lg:h-[12.5rem] xl:w-[15rem] xl:h-[15rem]"
-            />
+        <div class="menu__card">
+          <div class="menu-img__container">
+            <img src="Asset/pho.jpg" alt="pho" class="menu-img" />
           </div>
-          <div class="flex flex-col justify-center items-center gap-1">
-            <div
-              class="text-black text-center font-lato text-[1.25rem] not-italic font-normal md:text-[2rem]"
-            >
-              Pho
-            </div>
-            <div
-              class="h-16 text-black text-center font-lato text-[1rem] not-italic font-light md:text-[1.5rem] md:h-[10rem] lg:h-[12rem] xl:h-[10rem]"
-            >
+          <div class="menu-text__container">
+            <div class="menu-text__title">Pho</div>
+            <div class="menu-text__desc">
               Savory Vietnamese pho brimming with noodles, herbs, and tender
               meats.
             </div>
-            <div
-              class="text-black text-center font-lato text-[2rem] font-bold md:text-[2rem]"
-            >
-              Rp50.000
-            </div>
+            <div class="menu-text__price">Rp50.000</div>
           </div>
-          <div
-            class="bg-[#FF5733] text-white py-2 px-5 rounded-[3.125rem] hover:bg-[#D4492A]"
-          >
-            <button>
-              <a
-                href="#"
-                class="text-white text-center text-[1rem] font-semibold md:text-[1.75rem] lg:text-[1.5rem]"
-              >
-                ORDER NOW
-              </a>
-            </button>
-          </div>
+          <button class="menu-button">
+            <a href="#" class="menu-button__text"> ORDER NOW </a>
+          </button>
         </div>
 
-        <div
-          class="bg-white flex flex-col justify-center items-center border border-gray-100 transition transform duration-700 hover:shadow-xl hover:scale-105 p-3 rounded-lg relative gap-4"
-        >
-          <div
-            class="w-full mx-auto transform transition duration-300 hover:scale-105"
-          >
-            <img
-              src="Asset/ramen.jpg"
-              alt="ramen"
-              class="w-[18.75rem] h-[18.75rem] object-cover rounded-full mx-auto md:w-[15rem] md:h-[15rem] lg:w-[12.5rem] lg:h-[12.5rem] xl:w-[15rem] xl:h-[15rem]"
-            />
+        <div class="menu__card">
+          <div class="menu-img__container">
+            <img src="Asset/ramen.jpg" alt="ramen" class="menu-img" />
           </div>
-          <div class="flex flex-col justify-center items-center gap-1">
-            <div
-              class="text-black text-center font-lato text-[1.25rem] not-italic font-normal md:text-[2rem]"
-            >
-              Ramen
-            </div>
-            <div
-              class="h-16 text-black text-center font-lato text-[1rem] not-italic font-light md:text-[1.5rem] md:h-[10rem] lg:h-[12rem] xl:h-[10rem]"
-            >
+          <div class="menu-text__container">
+            <div class="menu-text__title">Ramen</div>
+            <div class="menu-text__desc">
               Rich broth, tender noodles, flavorful toppings, ultimate comfort.
             </div>
-            <div
-              class="text-black text-center font-lato text-[2rem] font-bold md:text-[2rem]"
-            >
-              Rp40.000
-            </div>
+            <div class="menu-text__price">Rp40.000</div>
           </div>
-          <div
-            class="bg-[#FF5733] text-white py-2 px-5 rounded-[3.125rem] hover:bg-[#D4492A]"
-          >
-            <button>
-              <a
-                href="#"
-                class="text-white text-center text-[1rem] font-semibold md:text-[1.75rem] lg:text-[1.5rem]"
-              >
-                ORDER NOW
-              </a>
-            </button>
-          </div>
+          <button class="menu-button">
+            <a href="#" class="menu-button__text"> ORDER NOW </a>
+          </button>
         </div>
 
-        <div
-          class="bg-white flex flex-col justify-center items-center border border-gray-100 transition transform duration-700 hover:shadow-xl hover:scale-105 p-3 rounded-lg relative gap-4"
-        >
-          <div
-            class="w-full mx-auto transform transition duration-300 hover:scale-105"
-          >
-            <img
-              src="Asset/rendang.webp"
-              alt="rendang"
-              class="w-[18.75rem] h-[18.75rem] object-cover rounded-full mx-auto md:w-[15rem] md:h-[15rem] lg:w-[12.5rem] lg:h-[12.5rem] xl:w-[15rem] xl:h-[15rem]"
-            />
+        <div class="menu__card">
+          <div class="menu-img__container">
+            <img src="Asset/rendang.webp" alt="rendang" class="menu-img" />
           </div>
-          <div class="flex flex-col justify-center items-center gap-1">
-            <div
-              class="text-black text-center font-lato text-[1.25rem] not-italic font-normal md:text-[2rem]"
-            >
-              Rendang
-            </div>
-            <div
-              class="h-16 text-black text-center font-lato text-[1rem] not-italic font-light md:text-[1.5rem] md:h-[10rem] lg:h-[12rem] xl:h-[10rem]"
-            >
+          <div class="menu-text__container">
+            <div class="menu-text__title">Rendang</div>
+            <div class="menu-text__desc">
               Slow-cooked beef in coconut, spices; a sumptuous, bold indulgence.
             </div>
-            <div
-              class="text-black text-center font-lato text-[2rem] font-bold md:text-[2rem]"
-            >
-              Rp40.000
-            </div>
+            <div class="menu-text__price">Rp40.000</div>
           </div>
-          <div
-            class="bg-[#FF5733] text-white py-2 px-5 rounded-[3.125rem] hover:bg-[#D4492A]"
-          >
-            <button>
-              <a
-                href="#"
-                class="text-white text-center text-[1rem] font-semibold md:text-[1.75rem] lg:text-[1.5rem]"
-              >
-                ORDER NOW
-              </a>
-            </button>
-          </div>
+          <button class="menu-button">
+            <a href="#" class="menu-button__text"> ORDER NOW </a>
+          </button>
         </div>
 
-        <div
-          class="bg-white flex flex-col justify-center items-center border border-gray-100 transition transform duration-700 hover:shadow-xl hover:scale-105 p-3 rounded-lg relative gap-4"
-        >
-          <div
-            class="w-full mx-auto transform transition duration-300 hover:scale-105"
-          >
-            <img
-              src="Asset/lasagna_169.jpeg"
-              alt="rendang"
-              class="w-[18.75rem] h-[18.75rem] object-cover rounded-full mx-auto md:w-[15rem] md:h-[15rem] lg:w-[12.5rem] lg:h-[12.5rem] xl:w-[15rem] xl:h-[15rem]"
-            />
+        <div class="menu__card">
+          <div class="menu-img__container">
+            <img src="Asset/lasagna_169.jpeg" alt="rendang" class="menu-img" />
           </div>
-          <div class="flex flex-col justify-center items-center gap-1">
-            <div
-              class="text-black text-center font-lato text-[1.25rem] not-italic font-normal md:text-[2rem]"
-            >
-              Lasagna
-            </div>
-            <div
-              class="h-16 text-black text-center font-lato text-[1rem] not-italic font-light md:text-[1.5rem] md:h-[10rem] lg:h-[12rem] xl:h-[10rem]"
-            >
+          <div class="menu-text__container">
+            <div class="menu-text__title">Lasagna</div>
+            <div class="menu-text__desc">
               Layers of pasta, rich meat sauce, creamy cheese; classic Italian
               comfort.
             </div>
-            <div
-              class="text-black text-center font-lato text-[2rem] font-bold md:text-[2rem]"
-            >
-              Rp100.000
-            </div>
+            <div class="menu-text__price">Rp100.000</div>
           </div>
-          <div
-            class="bg-[#FF5733] text-white py-2 px-5 rounded-[3.125rem] hover:bg-[#D4492A]"
-          >
-            <button>
-              <a
-                href="#"
-                class="text-white text-center text-[1rem] font-semibold md:text-[1.75rem] lg:text-[1.5rem]"
-              >
-                ORDER NOW
-              </a>
-            </button>
-          </div>
+          <button class="menu-button">
+            <a href="#" class="menu-button__text"> ORDER NOW </a>
+          </button>
         </div>
       </div>
     </section>
 
     <!--Footer-->
-    <footer
-      class="flex items-center justify-center min-w-screen-lg h-auto mt-10 mx-auto bg-[#ffab99] px-7 lg:h-[25rem]"
-    >
-      <div
-        class="grid grid-cols-1 items-center justify-center max-w-screen-lg gap-5 md:grid-cols-2 lg:grid-cols-3"
-      >
-        <div class="text-[#333] font-lato mt-14">
-          <div class="text-[1rem] font-semibold md:text-[1.25rem] lg:mx-auto">
-            Address
-          </div>
-          <div class="text-[1rem] font-normal md:text-[1.25rem] lg:mx-auto">
+    <footer class="footer min-w-screen-lg">
+      <div class="footer__container max-w-screen-lg">
+        <div class="footer-text">
+          <div class="footer-text__title">Address</div>
+          <div class="footer-text__desc">
             1234 Example Street, Anycity City, Anytown State, Postal code:
             12345, Undefined Country
           </div>
         </div>
-        <div class="text-[#333] font-lato mt-14">
-          <div class="text-[1rem] font-semibold md:text-[1.25rem] lg:mx-auto">
-            Contact
-          </div>
-          <div class="text-[1rem] font-normal md:text-[1.25rem] lg:mx-auto">
+        <div class="footer-text">
+          <div class="footer-text__title">Contact</div>
+          <div class="footer-text__desc">
             Tel: +123-456-7890
             <span class="block">Email: culinary@crossroads.com</span> Website:
             www.culinarycrossroads.com
           </div>
         </div>
-        <div
-          class="text-[#333] font-lato text-[1rem] font-normal my-14 md:text-[1.25rem] lg:mx-auto"
-        >
+        <div class="footer-text2">
           Keep in touch with us!
-          <div class="flex flex-row gap-2">
-            <a href="#" class="h-9 w-9 md:h-12 md:w-12">
+          <div class="social-media__container">
+            <a href="#" class="social-media__logo1">
               <img src="Asset/instagram-logo.svg" alt="instagram logo" />
             </a>
-            <a href="#" class="h-8 w-8 md:h-11 md:w-11">
+            <a href="#" class="social-media__logo2">
               <img src="Asset/facebook-logo.svg" alt="facebook logo" />
             </a>
-            <a href="#" class="h-8 w-8 md:h-11 md:w-11">
+            <a href="#" class="social-media__logo2">
               <img src="Asset/twitter-logo.svg" alt="twitter logo" />
             </a>
-            <a href="#" class="h-9 w-9 md:h-12 md:w-12">
+            <a href="#" class="social-media__logo1">
               <img src="Asset/youtube-logo.svg" alt="youtube logo" />
             </a>
           </div>
