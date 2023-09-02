@@ -3,7 +3,42 @@
 @tailwind utilities;
 
 @layer components {
-  .hero-container {
+  /* navbar section */
+  .navbar {
+    @apply bg-transparent fixed z-50 top-0 left-0 w-full transition duration-500;
+  }
+  .navbar__container {
+    @apply flex items-center max-w-screen-2xl mx-auto px-6 py-3;
+  }
+  .navbar-logo {
+    @apply flex flex-grow text-[#333] font-pacifico text-[1rem] not-italic font-normal cursor-pointer md:text-[1.5rem] xl:text-[2rem];
+  }
+  .navbar-items__container {
+    @apply flex items-center justify-end space-x-3;
+  }
+  .cart-icon {
+    @apply w-10 md:w-20;
+  }
+  .sign-in__button {
+    @apply text-[#333] font-lato text-[1rem] font-medium md:text-[1.5rem] xl:text-[2rem];
+  }
+  .sign-up__button {
+    @apply flex justify-center items-center px-3 py-1 bg-[#FF5733] rounded-[3.125rem] text-white text-center font-lato text-[1rem] font-medium md:text-[1.5rem] md:px-5 md:py-2 xl:text-[2rem] xl:px-7 xl:py-3 hover:bg-[#D4492A];
+  }
+
+  /* hero section */
+  .hero {
+    @apply h-[50rem] overflow-hidden 2xl:h-[65rem];
+  }
+
+  .hero__container {
+    @apply flex flex-col justify-center items-center shrink-0 w-full h-[50rem] 2xl:h-[65rem] 2xl:items-end;
     background: linear-gradient(135deg, rgba(255, 87, 51, 0.54) 0%, #fff 100%);
+  }
+  .hero-text__container {
+    @apply flex flex-col gap-[0.5rem] 2xl:mr-24 xxxl:mr-64 z-50;
+  }
+  .hero-text-1 {
+    @apply text-[#1ABC9C] text-center font-lato text-[1.5rem] not-italic font-semibold md:text-[2.5rem] xl:text-[3.125rem] 2xl:text-[4rem];
   }
 }

@@ -14,40 +14,29 @@
   </head>
   <body id="home">
     <!--Navbar-->
-    <header
-      class="bg-transparent fixed z-50 top-0 left-0 w-full transition duration-500"
-      id="header"
-    >
-      <nav class="flex items-center max-w-screen-2xl mx-auto px-6 py-3">
-        <div
-          class="flex flex-grow text-[#333] font-pacifico text-[1rem] not-italic font-normal cursor-pointer md:text-[1.5rem] xl:text-[2rem]"
-        >
+    <header class="navbar" id="header">
+      <nav class="navbar__container">
+        <div class="navbar-logo">
           <a href="#home">Culinary Crossroads</a>
         </div>
-        <div class="flex items-center justify-end space-x-3">
-          <div class="w-10 md:w-20">
+        <div class="navbar-items__container">
+          <div class="cart-icon">
             <a href="signin.html"> <img src="Asset/cart.svg" alt="cart" /></a>
           </div>
-          <div
-            class="text-[#333] font-lato text-[1rem] font-medium md:text-[1.5rem] xl:text-[2rem]"
-          >
+          <button class="sign-in__button">
             <a href="signin.html">Sign In</a>
-          </div>
-          <div
-            class="flex justify-center items-center px-3 py-1 bg-[#FF5733] rounded-[3.125rem] text-white text-center font-lato text-[1rem] font-medium md:text-[1.5rem] md:px-5 md:py-2 xl:text-[2rem] xl:px-7 xl:py-3 hover:bg-[#D4492A]"
-          >
+          </button>
+          <button class="sign-up__button">
             <a href="signup.html">Sign Up</a>
-          </div>
+          </button>
         </div>
       </nav>
     </header>
 
     <!--Hero-->
-    <main class="max-w-screen h-[50rem] overflow-hidden 2xl:h-[65rem]">
-      <div
-        class="flex flex-col justify-center items-center shrink-0 w-full h-[50rem] hero-container 2xl:h-[65rem] 2xl:items-end"
-      >
-        <div class="flex flex-col gap-[0.5rem] 2xl:mr-24 xxxl:mr-64 z-50">
+    <main class="hero max-w-screen">
+      <div class="hero__container">
+        <div class="hero-text__container">
           <h1
             class="text-[#1ABC9C] text-center font-lato text-[1.5rem] not-italic font-semibold md:text-[2.5rem] xl:text-[3.125rem] 2xl:text-[4rem]"
           >
