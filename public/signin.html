@@ -11,13 +11,20 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@400;700;800&family=Pacifico&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/x-icon" href="./Asset/favicon.png" />
   </head>
   <body class="auth">
     <!--Navbar-->
     <header class="navbar bg-white" id="header">
       <nav class="navbar__container">
         <div class="navbar-logo">
-          <a href="#home">Culinary Crossroads</a>
+          <a href="index.html#home" class="navbar-logo__link"
+            ><img
+              src="Asset/logo-primary.png"
+              alt=""
+              class="navbar-logo__logo" />
+            <img src="Asset/text-primary.png" alt="" class="navbar-logo__text"
+          /></a>
         </div>
         <div class="navbar-items__container">
           <div class="cart-icon">
@@ -35,7 +42,9 @@
 
     <!--Sign In-->
     <section class="auth__container">
-      <h1 class="auth__logo">Culinary Crossroads</h1>
+      <div class="auth__logo">
+        <img src="Asset/text-white.png" alt="logo-text" />
+      </div>
       <div class="authlayout__container1">
         <div class="authlayout__container2">
           <h2 class="auth__title">Sign In</h2>

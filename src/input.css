@@ -5,13 +5,22 @@
 @layer components {
   /* navbar section */
   .navbar {
-    @apply fixed z-50 top-0 left-0 w-full transition duration-500;
+    @apply fixed z-[999] top-0 left-0 w-full transition duration-500;
   }
   .navbar__container {
     @apply flex items-center max-w-screen-2xl mx-auto px-6 py-3;
   }
   .navbar-logo {
-    @apply flex flex-grow text-[#333] font-pacifico text-[1rem] not-italic font-normal cursor-pointer md:text-[1.5rem] xl:text-[2rem];
+    @apply flex flex-grow cursor-pointer items-center;
+  }
+  .navbar-logo__link {
+    @apply flex gap-1;
+  }
+  .navbar-logo__logo {
+    @apply w-14 h-7 md:w-16 md:h-8;
+  }
+  .navbar-logo__text {
+    @apply w-16 md:w-20;
   }
   .navbar-items__container {
     @apply flex items-center justify-end space-x-3;
@@ -194,7 +203,7 @@
     @apply flex flex-col max-w-xs justify-start items-center gap-[1.5rem] mx-auto my-24 md:mt-32;
   }
   .auth__logo {
-    @apply text-white text-center font-pacifico text-[3rem] not-italic font-normal;
+    @apply w-full;
   }
   .authlayout__container1 {
     @apply bg-white w-full justify-start items-center rounded-[3.125rem] filter drop-shadow-0-4-4-rgba-0 h-auto;
