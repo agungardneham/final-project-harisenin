@@ -200,7 +200,7 @@
     @apply p-0 m-0 bg-[#ff5733cc];
   }
   .auth__container {
-    @apply flex flex-col max-w-xs justify-start items-center gap-[1.5rem] mx-auto my-24 md:mt-32;
+    @apply flex flex-col max-w-xs justify-start items-center gap-[1.5rem] mx-auto py-24 md:pt-32;
   }
   .auth__logo {
     @apply w-full;
