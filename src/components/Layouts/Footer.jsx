@@ -3,8 +3,8 @@ import FooterText2 from "../Fragments/FooterText2";
 
 const Footer = () => {
   return (
-    <footer className="footer min-w-screen-lg">
-      <div className="footer__container max-w-screen-lg">
+    <footer className="footer min-w-screen-md">
+      <div className="footer__container max-w-screen-md">
         <FooterText type="address" />
         <FooterText type="contact" />
         <FooterText2 />

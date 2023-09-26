@@ -5,7 +5,7 @@ import Navbar from "../components/Layouts/Navbar";
 const RegisterPage = () => {
   return (
     <div className="auth">
-      <Navbar bg="bg-white" />
+      <Navbar bg="bg-white shadow-md" />
       <AuthLayouts type="register" />
       <Footer />
     </div>

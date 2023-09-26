@@ -5,7 +5,7 @@ const NavItems = () => {
   return (
     <div className="navbar-items__container">
       <div className="cart-icon">
-        <Anchor href="signin.html">
+        <Anchor href="/login">
           {" "}
           <img src="Asset/cart.svg" alt="cart" />
         </Anchor>

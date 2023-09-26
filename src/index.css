@@ -11,7 +11,7 @@
     @apply flex items-center max-w-screen-2xl mx-auto px-6 py-3;
   }
   .navbar-logo {
-    @apply flex flex-grow cursor-pointer items-center;
+    @apply flex flex-grow items-center;
   }
   .navbar-logo__link {
     @apply flex gap-1;
@@ -26,7 +26,7 @@
     @apply flex items-center justify-end space-x-3;
   }
   .cart-icon {
-    @apply w-10 md:w-20;
+    @apply w-10;
   }
   .sign-in__button {
     @apply text-[#333] font-lato text-[1rem] font-medium md:text-[1.25rem];
@@ -129,10 +129,10 @@
   .menu-type__container {
     @apply flex flex-row items-center justify-center space-x-3;
   }
-  .menu-type__food {
+  .menu-type__active {
     @apply text-[1.25rem] font-lato bg-[#FF5733] px-7 py-2 rounded-full text-white font-semibold hover:bg-[#D4492A];
   }
-  .menu-type__beverage {
+  .menu-type__not-active {
     @apply text-[1.25rem] font-lato bg-[#FFFFFF] px-7 py-2 rounded-full text-black font-semibold hover:bg-[#E0E0E0];
   }
   .menu__container {
@@ -151,10 +151,10 @@
     @apply flex flex-col justify-center items-center gap-1;
   }
   .menu-text__title {
-    @apply text-black text-center font-lato text-[1.25rem] not-italic font-normal md:text-[2rem];
+    @apply text-black text-center font-lato text-[1.25rem] not-italic font-semibold md:text-[2rem];
   }
   .menu-text__desc {
-    @apply h-14 text-black text-center font-lato text-[1rem] not-italic font-light md:text-[1.5rem] md:h-[10rem] lg:h-[12rem] xl:h-[10rem];
+    @apply h-14 text-black text-center font-lato text-[1rem] not-italic font-normal md:text-[1.5rem] md:h-[10rem] lg:h-[12rem] xl:h-[10rem];
   }
   .menu-text__price {
     @apply text-black text-center font-lato text-[2rem] font-bold md:text-[2rem];
