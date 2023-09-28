@@ -8,9 +8,10 @@ const FormInput = ({
   type,
   name,
   placeholder,
-  autoComplete = "",
-  spellCheck = "",
+  autoComplete,
+  spellCheck,
   inputClass,
+  onChange,
 }) => {
   return (
     <div className="auth-form__item">
@@ -25,6 +26,7 @@ const FormInput = ({
         autoComplete={autoComplete}
         spellCheck={spellCheck}
         className={inputClass}
+        onChange={onChange}
       />
     </div>
   );

@@ -5,6 +5,7 @@ const Input = ({
   autoComplete = "",
   spellCheck = "",
   className,
+  onChange,
 }) => {
   return (
     <input
@@ -15,6 +16,7 @@ const Input = ({
       autoComplete={autoComplete}
       spellCheck={spellCheck}
       className={className}
+      onChange={onChange}
       required
     />
   );

@@ -5,11 +5,15 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import LoginPage from "./pages/LoginPage.jsx";
 import RegisterPage from "./pages/RegisterPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
+import ErrorPage from "./pages/ErrorPage";
+import NavbarProvider from "./contexts/NavbarContext";
+import LoginProvider from "./contexts/LoginContext";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <HomePage />,
+    errorElement: <ErrorPage />,
   },
   {
     path: "/login",
@@ -23,6 +27,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <LoginProvider>
+      <NavbarProvider>
+        <RouterProvider router={router}></RouterProvider>
+      </NavbarProvider>
+    </LoginProvider>
   </React.StrictMode>
 );

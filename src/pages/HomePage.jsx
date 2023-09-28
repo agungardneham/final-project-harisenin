@@ -3,20 +3,10 @@ import Menu from "../components/Layouts/Menu";
 import Navbar from "../components/Layouts/Navbar";
 import Strength from "../components/Layouts/Strength";
 import Footer from "../components/Layouts/Footer";
-import { useState } from "react";
+import useNavbar from "../hooks/useNavbar";
 
 const HomePage = () => {
-  const [navBg, setNavBg] = useState("bg-transparent");
-
-  const handleScroll = () => {
-    if (window.scrollY > 0) {
-      setNavBg("bg-white shadow-md");
-    } else {
-      setNavBg("bg-transparent");
-    }
-  };
-
-  window.addEventListener("scroll", handleScroll);
+  const { navBg } = useNavbar();
 
   return (
     <div id="home">

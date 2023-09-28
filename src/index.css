@@ -26,7 +26,7 @@
     @apply flex items-center justify-end space-x-3;
   }
   .cart-icon {
-    @apply w-10;
+    @apply w-10 relative;
   }
   .sign-in__button {
     @apply text-[#333] font-lato text-[1rem] font-medium md:text-[1.25rem];
@@ -243,5 +243,14 @@
   }
   .auth-form__button {
     @apply text-white w-full h-8 font-lato text-[1rem] not-italic font-semibold bg-[#ff5733] rounded-[3.125rem] hover:bg-[#D4492A];
+  }
+
+  /* error page */
+  .error {
+    @apply h-screen overflow-hidden;
+  }
+  .error__container {
+    @apply flex flex-col justify-center items-center shrink-0 w-full h-screen;
+    background: linear-gradient(135deg, rgba(255, 87, 51, 0.54) 0%, #fff 100%);
   }
 }

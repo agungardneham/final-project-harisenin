@@ -10,6 +10,8 @@ const Menu = () => {
   const handleMenuFood = () => {
     setType("food");
   };
+
+  console.log();
   return (
     <section
       className="menu max-w-screen-xs md:max-w-screen-md lg:max-w-screen-lg"
