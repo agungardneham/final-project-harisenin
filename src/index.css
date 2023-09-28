@@ -23,7 +23,7 @@
     @apply w-16 md:w-20;
   }
   .navbar-items__container {
-    @apply flex items-center justify-end space-x-3;
+    @apply flex items-center justify-end space-x-2;
   }
   .cart-icon {
     @apply w-10 relative;

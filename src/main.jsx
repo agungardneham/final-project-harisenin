@@ -8,6 +8,7 @@ import HomePage from "./pages/HomePage.jsx";
 import ErrorPage from "./pages/ErrorPage";
 import NavbarProvider from "./contexts/NavbarContext";
 import LoginProvider from "./contexts/LoginContext";
+import CartProvider from "./contexts/CartContext";
 
 const router = createBrowserRouter([
   {
@@ -28,9 +29,11 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <LoginProvider>
-      <NavbarProvider>
-        <RouterProvider router={router}></RouterProvider>
-      </NavbarProvider>
+      <CartProvider>
+        <NavbarProvider>
+          <RouterProvider router={router}></RouterProvider>
+        </NavbarProvider>
+      </CartProvider>
     </LoginProvider>
   </React.StrictMode>
 );

@@ -1,6 +1,6 @@
 const foodList = [
   {
-    id: 1,
+    id: 7,
     name: "Fried Rice",
     img: "Asset/fried-rice.jpg",
     imgAlt: "fried rice",
@@ -8,7 +8,7 @@ const foodList = [
     price: 25000,
   },
   {
-    id: 2,
+    id: 8,
     name: "Pad Thai",
     img: "Asset/pad-thai.jpg",
     imgAlt: "pad thai",
@@ -16,7 +16,7 @@ const foodList = [
     price: 100000,
   },
   {
-    id: 3,
+    id: 9,
     name: "Pho",
     img: "Asset/pho.jpg",
     imgAlt: "pho",
@@ -24,7 +24,7 @@ const foodList = [
     price: 50000,
   },
   {
-    id: 4,
+    id: 10,
     name: "Ramen",
     img: "Asset/ramen.jpg",
     imgAlt: "ramen",
@@ -32,7 +32,7 @@ const foodList = [
     price: 40000,
   },
   {
-    id: 5,
+    id: 11,
     name: "Rendang",
     img: "Asset/rendang.webp",
     imgAlt: "rendang",
@@ -40,7 +40,7 @@ const foodList = [
     price: 40000,
   },
   {
-    id: 6,
+    id: 12,
     name: "Lasagna",
     img: "Asset/lasagna_169.jpeg",
     imgAlt: "lasagna",

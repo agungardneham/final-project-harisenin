@@ -1,14 +1,15 @@
 import { useNavigate } from "react-router-dom";
 import useLoginStatus from "../../hooks/useLoginStatus";
 
-const MenuCard = ({ img, imgAlt, name, desc, price }) => {
+const MenuCard = ({ img, imgAlt, name, desc, price, handleAddToCart, id }) => {
   const { loginStatus } = useLoginStatus();
   const navigate = useNavigate();
-  const handleOrderButton = () => {
+  const handleOrderButton = (itemId) => {
     if (!loginStatus) {
       navigate("/login");
     } else if (loginStatus) {
       console.log("ordered");
+      handleAddToCart(itemId);
     }
   };
   return (
@@ -20,13 +21,15 @@ const MenuCard = ({ img, imgAlt, name, desc, price }) => {
         <div className="menu-text__title">{name}</div>
         <div className="menu-text__desc">{desc}</div>
         <div className="menu-text__price">
-          {price.toLocaleString(`id-ID`, {
-            style: `currency`,
-            currency: `IDR`,
-          })}
+          {price
+            .toLocaleString(`id-ID`, {
+              style: `currency`,
+              currency: `IDR`,
+            })
+            .replace(",00", "")}
         </div>
       </div>
-      <button className="menu-button" onClick={handleOrderButton}>
+      <button className="menu-button" onClick={() => handleOrderButton(id)}>
         <div className="menu-button__text">ORDER NOW</div>
       </button>
     </div>

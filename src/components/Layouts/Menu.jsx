@@ -2,6 +2,7 @@ import { useState } from "react";
 import foodList from "../../services/FoodList";
 import beverageList from "../../services/BeverageList";
 import MenuCard from "../Fragments/MenuCard";
+import useCart from "../../hooks/useCart";
 const Menu = () => {
   const [type, setType] = useState("food");
   const handleMenuBeverage = () => {
@@ -11,6 +12,18 @@ const Menu = () => {
     setType("food");
   };
 
+  const { cart, setCart } = useCart();
+  const handleAddToCart = (id) => {
+    if (cart.find((item) => item.id === id)) {
+      setCart(
+        cart.map((item) =>
+          item.id === id ? { ...item, qty: item.qty + 1 } : item
+        )
+      );
+    } else {
+      setCart([...cart, { id, qty: 1 }]);
+    }
+  };
   console.log();
   return (
     <section
@@ -40,22 +53,26 @@ const Menu = () => {
           foodList.map((item) => (
             <MenuCard
               key={item.id}
+              id={item.id}
               name={item.name}
               img={item.img}
               imgAlt={item.imgAlt}
               desc={item.desc}
               price={item.price}
+              handleAddToCart={handleAddToCart}
             />
           ))}
         {type === "beverage" &&
           beverageList.map((item) => (
             <MenuCard
               key={item.id}
+              id={item.id}
               name={item.name}
               img={item.img}
               imgAlt={item.imgAlt}
               desc={item.desc}
               price={item.price}
+              handleAddToCart={handleAddToCart}
             />
           ))}
       </div>
