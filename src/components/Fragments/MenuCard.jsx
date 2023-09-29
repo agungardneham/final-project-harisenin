@@ -8,7 +8,6 @@ const MenuCard = ({ img, imgAlt, name, desc, price, handleAddToCart, id }) => {
     if (!loginStatus) {
       navigate("/login");
     } else if (loginStatus) {
-      console.log("ordered");
       handleAddToCart(itemId);
     }
   };

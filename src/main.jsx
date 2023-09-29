@@ -9,6 +9,8 @@ import ErrorPage from "./pages/ErrorPage";
 import NavbarProvider from "./contexts/NavbarContext";
 import LoginProvider from "./contexts/LoginContext";
 import CartProvider from "./contexts/CartContext";
+import CheckoutPage from "./pages/CheckoutPage";
+import CheckoutSuccess from "./pages/CheckoutSuccess";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +25,14 @@ const router = createBrowserRouter([
   {
     path: "/register",
     element: <RegisterPage />,
+  },
+  {
+    path: "/checkout",
+    element: <CheckoutPage />,
+  },
+  {
+    path: "/checkoutsuccess",
+    element: <CheckoutSuccess />,
   },
 ]);
 

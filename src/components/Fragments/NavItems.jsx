@@ -70,11 +70,46 @@ const NavItems = () => {
     }
   }, [cart, setTotalPrice, foodProductLookup, beverageProductLookup]);
 
+  // add one item to cart button
+  const handleAdd = (id) => {
+    setCart((prevCart) => {
+      const updatedCart = prevCart.map((item) =>
+        item.id === id ? { ...item, qty: item.qty + 1 } : item
+      );
+
+      // Update the local storage and return the updated cart
+      localStorage.setItem("cart", JSON.stringify(updatedCart));
+      return updatedCart;
+    });
+  };
+
+  // remove one item from cart button
+  const handleDelete = (id) => {
+    setCart((prevCart) => {
+      const updatedCart = prevCart.map((item) =>
+        item.id === id ? { ...item, qty: item.qty - 1 } : item
+      );
+
+      // Filter out items with qty greater than 0
+      const filteredCart = updatedCart.filter((item) => item.qty > 0);
+
+      // Update the local storage and return the filtered cart
+      localStorage.setItem("cart", JSON.stringify(filteredCart));
+      return filteredCart;
+    });
+  };
+
   // remove all items in cart
   const handleRemove = () => {
     localStorage.removeItem("cart");
     setCart([]);
   };
+
+  // checkout item in cart
+  const handleCheckout = () => {
+    navigate("/checkout");
+  };
+
   return (
     <>
       {loginStatus === false && (
@@ -116,12 +151,11 @@ const NavItems = () => {
                 </div>
                 <div className="flex flex-col w-full">
                   <div className="flex flex-row font-lato font-semibold justify-center items-center w-full text-center">
-                    <div className="w-[30%]">Item(s)</div>
+                    <div className="w-[40%]">Item(s)</div>
                     <div className="w-[30%]">Price</div>
-                    <div className="w-[10%]">Qty</div>
-                    <div className="w-[30%]">Total</div>
+                    <div className="w-[30%]">Qty</div>
                   </div>
-                  <div className="flex flex-col">
+                  <div className="flex flex-col gap-2 mb-2">
                     {cart.map((item) => {
                       {
                         /* find same product by id */
@@ -135,7 +169,7 @@ const NavItems = () => {
                             key={item.id}
                             className="flex flex-row gap-3 justify-center items-start w-full text-center font-lato font-normal"
                           >
-                            <div className="w-[30%]">{foodProduct.name}</div>
+                            <div className="w-[40%]">{foodProduct.name}</div>
                             <div className="w-[30%]">
                               {foodProduct.price
                                 .toLocaleString(`id-ID`, {
@@ -144,14 +178,22 @@ const NavItems = () => {
                                 })
                                 .replace(",00", "")}
                             </div>
-                            <div className="w-[10%]">{item.qty}</div>
-                            <div className="w-[30%]">
-                              {(foodProduct.price * item.qty)
-                                .toLocaleString(`id-ID`, {
-                                  style: `currency`,
-                                  currency: `IDR`,
-                                })
-                                .replace(",00", "")}
+                            <div className="w-[30%] flex flex-row gap-3 justify-center items-center">
+                              <button
+                                className="bg-[#FF5733] px-[0.55rem] text-white rounded-full font-semibold hover:bg-[#D4492A]"
+                                type="button"
+                                onClick={() => handleDelete(item.id)}
+                              >
+                                -
+                              </button>
+                              <div>{item.qty}</div>
+                              <button
+                                className="bg-[#FF5733] px-[0.55rem] text-white rounded-full hover:bg-[#D4492A]"
+                                type="button"
+                                onClick={() => handleAdd(item.id)}
+                              >
+                                +
+                              </button>
                             </div>
                           </div>
                         );
@@ -160,7 +202,7 @@ const NavItems = () => {
                       }
                     })}
                   </div>
-                  <div className="flex flex-col">
+                  <div className="flex flex-col gap-2">
                     {cart.map((item) => {
                       {
                         /* find same product by id */
@@ -174,7 +216,7 @@ const NavItems = () => {
                             key={item.id}
                             className="flex flex-row gap-3 justify-center items-start w-full text-center font-lato font-normal"
                           >
-                            <div className="w-[30%]">
+                            <div className="w-[40%]">
                               {beverageProduct.name}
                             </div>
                             <div className="w-[30%]">
@@ -185,14 +227,22 @@ const NavItems = () => {
                                 })
                                 .replace(",00", "")}
                             </div>
-                            <div className="w-[10%]">{item.qty}</div>
-                            <div className="w-[30%]">
-                              {(beverageProduct.price * item.qty)
-                                .toLocaleString(`id-ID`, {
-                                  style: `currency`,
-                                  currency: `IDR`,
-                                })
-                                .replace(",00", "")}
+                            <div className="w-[30%] flex flex-row gap-3 justify-center items-center">
+                              <button
+                                className="bg-[#FF5733] px-[0.55rem] text-white rounded-full font-semibold hover:bg-[#D4492A]"
+                                type="button"
+                                onClick={() => handleDelete(item.id)}
+                              >
+                                -
+                              </button>
+                              <div>{item.qty}</div>
+                              <button
+                                className="bg-[#FF5733] px-[0.55rem] text-white rounded-full hover:bg-[#D4492A]"
+                                type="button"
+                                onClick={() => handleAdd(item.id)}
+                              >
+                                +
+                              </button>
                             </div>
                           </div>
                         );
@@ -202,7 +252,7 @@ const NavItems = () => {
                     })}
                   </div>
                   {cart.length > 0 && (
-                    <div className="flex flex-row justify-center items-center w-full text-center">
+                    <div className="flex flex-row justify-center items-center w-full text-center mt-3">
                       <div className="w-[70%] font-semibold font-lato">
                         Total Price
                       </div>
@@ -226,7 +276,10 @@ const NavItems = () => {
                     >
                       Remove All
                     </button>
-                    <button className="px-2 py-1 bg-[#FF5733] text-white rounded-full my-2 font-lato">
+                    <button
+                      className="px-2 py-1 bg-[#FF5733] text-white rounded-full my-2 font-lato"
+                      onClick={handleCheckout}
+                    >
                       Checkout
                     </button>
                   </div>
