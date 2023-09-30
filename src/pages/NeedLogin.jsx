@@ -10,7 +10,7 @@ const NeedLogin = () => {
           You must logged in to see this page
         </h1>
         <p className="font-lato font-semibold text-2xl">
-          Go login here{" "}
+          Go login{" "}
           <Anchor href="/login" className="text-[#F39C12]">
             here
           </Anchor>

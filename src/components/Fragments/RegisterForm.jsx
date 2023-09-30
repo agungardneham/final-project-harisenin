@@ -2,7 +2,8 @@ import { useState } from "react";
 import Anchor from "../Elements/Anchor";
 import Button from "../Elements/Button";
 import FormInput from "../Elements/FormInput";
-import userDB from "../../services/userDB";
+import { getUserByEmail, createUser } from "../../services/userDB";
+import { useNavigate } from "react-router-dom";
 
 const RegisterForm = () => {
   const [formData, setFormData] = useState({
@@ -18,46 +19,61 @@ const RegisterForm = () => {
       [name]: value,
     });
   };
-
+  const navigate = useNavigate();
   const [registerStatus, setRegisterStatus] = useState(null);
-  const handleRegister = (e) => {
+
+  const handleRegister = async (e) => {
     e.preventDefault();
-    // check if email already been registered
-    const isEmailRegistered = userDB.some(
-      (user) => user.email === formData.email
-    );
-    if (isEmailRegistered) {
-      setRegisterStatus("Email already registered");
-      console.log(registerStatus);
+    // Check if email already exists in API
+    try {
+      const existingUser = await getUserByEmail(formData.email);
+
+      if (existingUser > 0) {
+        setRegisterStatus("Email already registered");
+        return;
+      }
+    } catch (error) {
+      setRegisterStatus("Error checking email");
       return;
     }
 
-    // check if password and confirmPassword match
-    if (formData.password !== formData.confirmPassword) {
-      setRegisterStatus("Password does not match");
-      return;
-    }
-
-    // create new user
+    // Create a new user object
     const newUser = {
-      id: userDB.length + 1,
       name: formData.name,
       email: formData.email,
       password: formData.password,
-      cart: [],
     };
-    userDB.push(newUser);
 
-    // reset formData
-    setFormData({
-      name: "",
-      email: "",
-      password: "",
-      confirmPassword: "",
-    });
+    try {
+      // Create the user and get the response data
+      await createUser(newUser);
+      // const createdUser = response.data;
 
-    setRegisterStatus("Registration successful!");
+      // Check if password and confirmPassword match
+      if (formData.password !== formData.confirmPassword) {
+        setRegisterStatus("Password does not match");
+        return;
+      }
+
+      // Reset formData
+      setFormData({
+        name: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
+      });
+
+      setRegisterStatus("Registration successful!");
+      alert("Registration successful! Please login to continue.");
+      navigate("/login");
+    } catch (error) {
+      console.error("Error creating user:", error);
+
+      // Set a more informative error message
+      setRegisterStatus("Error creating user. Please try again later.");
+    }
   };
+
   return (
     <form className="auth-form" onSubmit={handleRegister}>
       <div className="auth-form__container">

@@ -1,32 +1,48 @@
 import Anchor from "../Elements/Anchor";
 import Button from "../Elements/Button";
 import FormInput from "../Elements/FormInput";
-import userDB from "../../services/userDB";
+import getUser from "../../services/userDB";
 import Cookies from "js-cookie";
 import useLoginStatus from "../../hooks/useLoginStatus";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { debounce } from "lodash";
 
 const LoginForm = () => {
-  const { loginStatus, setLoginStatus } = useLoginStatus();
+  // define state and const
+  // loginStatus = state to define if the user is logged in or not
+  // showLoginStatus = state to show login error message
+  const { loginStatus, setLoginStatus, user, setUser } = useLoginStatus();
   const [showLoginStatus, setShowLoginStatus] = useState(false);
   const navigate = useNavigate();
 
+  // debounce the data from API
+  const delayedUser = debounce(getUser, 1000);
+  useEffect(() => {
+    delayedUser((userData) => {
+      setUser(userData);
+    });
+    return () => {
+      delayedUser.cancel();
+    };
+  }, [delayedUser, setUser]);
+
+  // handle login
   const handleLogin = (e) => {
     e.preventDefault();
-    // check user data in database
+    // check user data in API
     const enteredEmail = e.target.email.value;
     const enteredPassword = e.target.password.value;
+    const userData = user.find((user) => user.email === enteredEmail);
 
-    const user = userDB.find((user) => user.email === enteredEmail);
-
-    if (user && user.password === enteredPassword) {
+    // check if the password match
+    if (userData && userData.password === enteredPassword) {
       setLoginStatus(true);
       setShowLoginStatus(true);
-      Cookies.set("username", user.name);
+      Cookies.set("username", userData.name);
+      Cookies.set("id", userData.id);
       navigate("/");
     } else {
-      // setLoginStatus(false);
       setShowLoginStatus(true);
     }
   };

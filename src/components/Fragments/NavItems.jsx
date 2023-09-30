@@ -9,14 +9,16 @@ import foodList from "../../services/FoodList";
 import beverageList from "../../services/BeverageList";
 
 const NavItems = () => {
+  // define state & const
   const { loginStatus, setLoginStatus } = useLoginStatus();
   const [cartMenu, setCartMenu] = useState(false);
-  const { cart, setCart, totalPrice, setTotalPrice } = useCart();
+  const { cart, setCart, totalPrice, setTotalPrice, handleAdd, handleDelete } =
+    useCart();
   const [totalItem, setTotalItem] = useState(0);
   const userName = Cookies.get("username");
   const navigate = useNavigate();
 
-  // parse cart from localStorage (or API)
+  // get user cart data from local storage
   useEffect(() => {
     setCart(JSON.parse(localStorage.getItem("cart")) || []);
   }, [setCart]);
@@ -52,52 +54,24 @@ const NavItems = () => {
   const beverageProductLookup = Object.fromEntries(
     beverageList.map((beverage) => [beverage.id, beverage])
   );
-
-  // count total price of cart only if there is item in cart
   useEffect(() => {
+    // count total price of cart only if there is item in cart
     if (cart.length > 0) {
       const totalFood = cart.reduce((acc, item) => {
         const foodProduct = foodProductLookup[item.id];
         return acc + (foodProduct ? foodProduct.price * item.qty : 0);
       }, 0);
+
       const totalBeverage = cart.reduce((acc, item) => {
         const beverageProduct = beverageProductLookup[item.id];
         return acc + (beverageProduct ? beverageProduct.price * item.qty : 0);
       }, 0);
+
       const sum = totalFood + totalBeverage;
       setTotalPrice(sum);
       localStorage.setItem("cart", JSON.stringify(cart));
     }
   }, [cart, setTotalPrice, foodProductLookup, beverageProductLookup]);
-
-  // add one item to cart button
-  const handleAdd = (id) => {
-    setCart((prevCart) => {
-      const updatedCart = prevCart.map((item) =>
-        item.id === id ? { ...item, qty: item.qty + 1 } : item
-      );
-
-      // Update the local storage and return the updated cart
-      localStorage.setItem("cart", JSON.stringify(updatedCart));
-      return updatedCart;
-    });
-  };
-
-  // remove one item from cart button
-  const handleDelete = (id) => {
-    setCart((prevCart) => {
-      const updatedCart = prevCart.map((item) =>
-        item.id === id ? { ...item, qty: item.qty - 1 } : item
-      );
-
-      // Filter out items with qty greater than 0
-      const filteredCart = updatedCart.filter((item) => item.qty > 0);
-
-      // Update the local storage and return the filtered cart
-      localStorage.setItem("cart", JSON.stringify(filteredCart));
-      return filteredCart;
-    });
-  };
 
   // remove all items in cart
   const handleRemove = () => {
